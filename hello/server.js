@@ -22,6 +22,14 @@ app.get('/list', (req, res) => {
             res.json(data.Buckets.map(bucket => bucket.Name));
         }
     });
+    // s3.headBucket({ Bucket: "acl1" }, function (err, data) {
+    //     if (err) {
+    //         console.log(`Caught error ${err}.`);
+    //     }
+    //     else {
+    //         console.log(data);
+    //     }
+    // });
 });
 
 app.listen(PORT, () => {
